@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Giulia Iadisernia – PhD Candidate in Data Science</title>
 
+<!-- ICON LIBRARY -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     margin: 0;
@@ -16,7 +19,7 @@ body {
 
 /* HERO SECTION */
 .hero {
-    background-color: #CBDFF7;  /* main blue background */
+    background-color: #CBDFF7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +35,7 @@ body {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('imgs/NN_logo.png'); /* your uploaded logo */
+    background-image: url('imgs/NN_logo.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50%;
@@ -61,30 +64,23 @@ body {
     margin: 5px 0 25px 0;
 }
 
-/* Buttons */
-.buttons {
+/* SOCIAL ICONS */
+
+.social {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    gap: 25px;
+    margin-top: 10px;
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 22px;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 8px;
-    background-color: #1e90ff;
-    color: white;
+.social a {
+    font-size: 28px;
+    color: #2F4F4F;
     transition: all 0.2s ease;
 }
 
-.button:hover {
+.social a:hover {
+    color: #1e90ff;
     transform: translateY(-3px);
-    opacity: 0.9;
 }
 
 /* CONTENT SECTION */
@@ -114,11 +110,12 @@ a {
     color: #1e90ff;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
 
-/* Optional small profile image */
+/* Profile image */
 .profile-img {
     width: 140px;
     height: 140px;
@@ -130,23 +127,24 @@ a:hover {
 }
 </style>
 </head>
+
 <body>
 
 <section class="hero">
-    <!-- Optional profile image -->
-    <img src="imgs/Giulia_Iadisernia.jpg" alt="Giulia Iadisernia" class="profile-img">
 
-    <h1>Giulia Iadisernia</h1>
-    <h2>PhD Candidate in Data Science</h2>
+<img src="imgs/Giulia_Iadisernia.jpg" alt="Giulia Iadisernia" class="profile-img">
 
-    <div class="buttons">
-        <a class="button" href="mailto:giulia.iadisernia@uniroma1.it">Email</a>
-        <a class="button" href="https://github.com/Iadiserniag">GitHub</a>
-        <a class="button" href="https://www.linkedin.com/in/giulia-iadisernia">LinkedIn</a>
-        <a class="button" href="#">Scholar</a>
-    </div>
+<h1>Giulia Iadisernia</h1>
+<h2>PhD Candidate in Data Science</h2>
+
+<div class="social">
+<a href="mailto:giulia.iadisernia@uniroma1.it"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://github.com/Iadiserniag"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.linkedin.com/in/giulia-iadisernia"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-solid fa-graduation-cap"></i></a>
+</div>
+
 </section>
-
 <section class="container">
     <h3>About Me</h3>
     <p>
@@ -154,13 +152,36 @@ a:hover {
         My research focuses on assessing the trustworthiness and explainability of large reasoning models, particularly for applications in economics and finance. 
         I am a member of the <a href="https://rstless.it/giulia-iadisernia-121">RSTLess</a> research group and a research intern at the Bank of Italy.
     </p>
-
     <h3>Short Bio</h3>
-    <p>
-        I graduated summa cum laude from <a href="https://www.luiss.it">LUISS Guido Carli University</a> with a BSc in Management and Computer Science 
-        and earned my MSc in Data Science at Sapienza University of Rome. I completed multiple internships at the Bank of Italy, contributing to projects in NLP, LLMs, ML, and monetary policy. 
-        My academic work includes publications in AI in Finance and authorship analysis in central bank communications.
-    </p>
+    <p> I graduated summa cum laude from LUISS Guido Carli University</a> with a BSc in Management and Computer Science and from Sapienza University of Rome with an MSc in Data Science.
+    During my studies I developed a strong interest in the intersection between data science and economics. </p>
+    <p> During both my bachelor's and master's studies, I collaborated with the Applied Research Team (ART) at the <a href="https://www.bancaditalia.it/">Bank of Italy</a>.
+        My bachelor's internship project focused on the structural properties of the Bitcoin Lightning Network using graph theory.
+        I later returned for my master's thesis internship, where I worked on authorship attribution and topic analysis in Italian central bank communication using natural language processing methods. </p>
+    <p> In 2025 I joined the Applied Research Team (ART) of the Bank of Italy as a research intern working on large language models and their applications in macroeconomic forecasting.
+        This work led to the publication <a href="https://dl.acm.org/doi/10.1145/3768292.3770385">Prompting for Policy: Forecasting Macroeconomic Scenarios with Synthetic LLM Personas</a>, presented at the ACM International Conference on AI in Finance (ICAIF 2025). </p>
+    Fine-tuned transformer-based models on ECB press conference transcripts to measure hawkish–dovish sentiment and construct an index of perceived monetary policy stance
+    <p> I am currently a research intern at the Directorate General for Economics, Statistics and Research of the Bank of Italy, where I am developing NLP-based methods measure hawkish–dovish sentiment of monetary policy communication and construct an index of perceived monetary policy stance.
+        Part of this work is available through the project <a href="https://iadiserniag.github.io/ECBTextualToneIndex.github.io/">ECB Textual Tone Index</a>. This internship follows my selection as <em>"particularly deserving"</em> in the Giorgio Mortara scholarship competition. </p>
+
+    <h3>Research</h3>
+
+    <ul>
+    
+    <li>
+    <a href="https://dl.acm.org/doi/10.1145/3768292.3770385">
+    Prompting for Policy: Forecasting Macroeconomic Scenarios with Synthetic LLM Personas
+    </a>  
+    (ACM International Conference on AI in Finance – ICAIF 2025)
+    </li>
+    
+    <li>
+    <a href="https://iadiserniag.github.io/ECBTextualToneIndex.github.io/">
+    ECB Textual Tone Index
+    </a> – NLP-based index measuring hawkish/dovish sentiment in ECB press conferences.
+    </li>
+    
+    </ul>
 
     <h3>Skills</h3>
     <ul>
