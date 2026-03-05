@@ -1,142 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giulia Iadisernia – PhD in Data Science</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      background-color: #fdfdfd;
-    }
-    header {
-      background-color: #003399;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    header h2 {
-      margin: 0.5rem 0 1rem 0;
-      font-weight: 400;
-      font-size: 1.2rem;
-    }
-    nav {
-      text-align: center;
-      margin: 1rem 0;
-    }
-    nav a {
-      color: #003399;
-      margin: 0 0.8rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h3 {
-      color: #003399;
-      margin-top: 2rem;
-      font-size: 1.5rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    a {
-      color: #003399;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #555;
-      border-top: 1px solid #ddd;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giulia Iadisernia – PhD Candidate in Data Science</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #222;
+}
+
+/* HERO SECTION */
+.hero {
+    background-color: #CBDFF7;  /* main blue background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 60px 20px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+/* Transparent logo in the background */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('imgs/NN_logo.png'); /* your uploaded logo */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+/* Ensure content is above logo */
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Name and title */
+.hero h1 {
+    color: #2F4F4F;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 10px 0 10px 0;
+}
+
+.hero h2 {
+    color: #2F4F4F;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 5px 0 25px 0;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: #1e90ff;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* CONTENT SECTION */
+.container {
+    color: #2F4F4F;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h3 {
+    font-size: 28px;
+    color: #2F4F4F;
+    margin-top: 30px;
+}
+
+/* Lists */
+ul {
+    text-align: left;
+    max-width: 700px;
+    margin: 10px auto 20px auto;
+}
+
+/* Links */
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Optional small profile image */
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+</style>
 </head>
 <body>
 
-<header>
-  <h1>Giulia Iadisernia</h1>
-  <h2>PhD in Data Science</h2>
-  <nav>
-    <a href="mailto:giulia.iadisernia@uniroma1.it">Email</a>
-    <a href="#">CV</a>
-    <a href="https://www.linkedin.com/in/giulia-iadisernia">LinkedIn</a>
-    <a href="https://scholar.google.com/citations?user=fNfSMaoAAAAJ&hl=en">Scholar</a>
-    <a href="www.github.com/Iadiserniag">GitHub</a>
-  </nav>
-</header>
+<section class="hero">
+    <!-- Optional profile image -->
+    <img src="imgs/Giulia_Iadisernia.jpg" alt="Giulia Iadisernia" class="profile-img">
 
-<section>
-  <h3>About Me</h3>
-  <p>
-    I am a PhD student in Data Science at <a href="https://www.uniroma1.it">Sapienza University of Rome</a>. My research focuses on assessing the trustworthiness and explainability of large reasoning models, with a particular interest in applications in economics and finance. 
-    I am a member of the <a href="https://rstless.it/giulia-iadisernia-121">RSTLess</a> research group and a Research Fellow at the Bank of Italy.
-  </p>
+    <h1>Giulia Iadisernia</h1>
+    <h2>PhD Candidate in Data Science</h2>
 
-  <h3>Short Bio</h3>
-  <p>
-    I graduated summa cum laude from <a href="https://www.luiss.it">LUISS Guido Carli University</a> with a BSc in Management and Computer Science and earned my MSc in Data Science at Sapienza University of Rome. 
-    During my studies, I completed multiple internships at the Bank of Italy, contributing to projects in NLP, LLMs, ML, and monetary policy. 
-    My academic work includes publications in AI in Finance and authorship analysis in central bank communications.
-  </p>
-
-  <h3>Publications</h3>
-  <ul>
-    <li>
-      Iadisernia, G., Camassa, C. (2025). 
-      <a href="https://dl.acm.org/doi/10.1145/3768292.3770385">
-        <em>Prompting for Policy: Forecasting Macroeconomic Scenarios with Synthetic LLM Personas</em>
-      </a>. Proceedings of the 6th ACM International Conference on AI in Finance (ICAIF).
-    </li>
-  </ul>
-
-  <h3>Conferences & Seminars</h3>
-  <ul>
-    <li><a href="https://sites.google.com/view/ECAI25-ai-fin">Workshop on AI in Finance</a> (ECAI 2025), Bologna</li>
-    <li><a href="https://www.integreat.no/events/public/workshops/veridical-data-science.html">Workshop on Veridical Data Science</a>, Sapienza University of Rome</li>
-  </ul>
-
-  <h3>Honours & Awards</h3>
-  <ul>
-    <li><a href="https://www.bancaditalia.it/chi-siamo/lavorare-bi/borse-di-studio/stringher-mortara-menichella/index.html">Giorgio Mortara Scholarship</a> (meritevole), Banca d'Italia, 2024</li>
-    <li>Wanted the Best Scholarship, Sapienza University of Rome, 2022–2024</li>
-    <li>1st Place, KNIME Analytics in Creative Industries Challenge, 2021</li>
-    <li>United for Learning Scholarship, LUISS Guido Carli University, 2021–2022</li>
-  </ul>
-
-  <h3>Certifications</h3>
-  <ul>
-    <li>Generative AI Fundamentals, Udacity, 2025</li>
-    <li>Basic Proficiency in KNIME Analytics Platform, 2022</li>
-  </ul>
-
-  <h3>Skills</h3>
-  <ul>
-    <li>Programming: Python, R, SQL, LaTeX, KNIME, Google Earth Engine</li>
-    <li>Data & ML: NLP, LLMs, Machine Learning, Topic Modeling, Graph Theory</li>
-    <li>Office: Microsoft Word, Excel, PowerPoint</li>
-    <li>Languages: Italian (native), English (fluent)</li>
-  </ul>
+    <div class="buttons">
+        <a class="button" href="mailto:giulia.iadisernia@uniroma1.it">Email</a>
+        <a class="button" href="https://github.com/Iadiserniag">GitHub</a>
+        <a class="button" href="https://www.linkedin.com/in/giulia-iadisernia">LinkedIn</a>
+        <a class="button" href="#">Scholar</a>
+    </div>
 </section>
 
-<footer>
-  &copy; 2026 Giulia Iadisernia. All rights reserved.
-</footer>
+<section class="container">
+    <h3>About Me</h3>
+    <p>
+        I am a PhD student in Data Science at <a href="https://www.uniroma1.it">Sapienza University of Rome</a>. 
+        My research focuses on assessing the trustworthiness and explainability of large reasoning models, particularly for applications in economics and finance. 
+        I am a member of the <a href="https://rstless.it/giulia-iadisernia-121">RSTLess</a> research group and a research intern at the Bank of Italy.
+    </p>
+
+    <h3>Short Bio</h3>
+    <p>
+        I graduated summa cum laude from <a href="https://www.luiss.it">LUISS Guido Carli University</a> with a BSc in Management and Computer Science 
+        and earned my MSc in Data Science at Sapienza University of Rome. I completed multiple internships at the Bank of Italy, contributing to projects in NLP, LLMs, ML, and monetary policy. 
+        My academic work includes publications in AI in Finance and authorship analysis in central bank communications.
+    </p>
+
+    <h3>Skills</h3>
+    <ul>
+        <li>Programming: Python, R, SQL, LaTeX, KNIME, Google Earth Engine</li>
+        <li>Data & ML: NLP, LLMs, Machine Learning, Topic Modeling, Graph Theory</li>
+        <li>Office: Microsoft Word, Excel, PowerPoint</li>
+        <li>Languages: Italian (native), English (fluent)</li>
+    </ul>
+</section>
 
 </body>
 </html>
