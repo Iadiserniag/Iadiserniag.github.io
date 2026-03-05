@@ -2,171 +2,214 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giulia Iadisernia – CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giulia Iadisernia — Portfolio CV</title>
+
+  <!-- Font Awesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
+
   <style>
-    /* Reset & basic styles */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f7f7f7; color: #333; }
+    /* Base */
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background: #fafafa;
+    }
     a { color: #0077cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    h1, h2, h3 { margin-bottom: 0.5em; }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; border-bottom: 2px solid #0077cc; padding-bottom: 0.2em; margin-top: 1.5em; }
-    h3 { font-size: 1.2rem; margin-bottom: 0.2em; }
-    ul { list-style: disc inside; margin-bottom: 1em; }
-    span.place, span.location { display: block; font-style: italic; font-size: 0.9em; color: #555; }
-    .container { max-width: 900px; margin: auto; padding: 20px; background: #fff; }
-    .section { margin-bottom: 2em; }
-    .job, .education, .project, .publication, .conference { margin-bottom: 1.5em; }
-    .date { font-weight: bold; color: #0077cc; margin-bottom: 0.3em; }
-    .sidebar { background: #f0f0f0; padding: 15px; margin-top: 2em; }
-    .skills ul { columns: 2; -webkit-columns: 2; -moz-columns: 2; }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+    nav a { margin-left: 1.2rem; font-size: 0.95rem; }
+
+    /* Hero */
+    header.hero {
+      padding: 120px 2rem 60px;
+      text-align: center;
+      background: #0077cc;
+      color: #fff;
+    }
+    header.hero h1 { font-size: 3rem; margin-bottom: 0.2em; }
+    header.hero p { font-size: 1.1rem; opacity: 0.85; }
+
+    /* Sections */
+    section {
+      padding: 60px 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      border-bottom: 3px solid #0077cc;
+      padding-bottom: 0.3em;
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 3px solid #0077cc;
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+    }
+    .event {
+      margin-bottom: 2rem;
+    }
+    .event .date {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #0077cc;
+    }
+    .event h3 { margin: 0.4rem 0; font-size: 1.2rem; }
+
+    /* Cards for projects */
+    .project-card {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Skills list */
+    .skills ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.8rem;
+      list-style: none;
+      padding: 0;
+    }
+    .skills li {
+      background: #0077cc;
+      color: #fff;
+      padding: 0.6rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    /* Contact */
+    .contact a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 0.8rem;
+      border: 1px solid #0077cc;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Small responsive fixes */
+    @media (max-width: 600px) {
+      nav { font-size: 0.9rem; }
+      header.hero h1 { font-size: 2.5rem; }
+    }
   </style>
 </head>
+
 <body>
 
-<div class="container">
-  <!-- Header -->
-  <header>
+  <!-- Navigation -->
+  <nav>
+    <div><strong>Giulia Iadisernia</strong></div>
+    <div>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
     <h1>Giulia Iadisernia</h1>
+    <p>Borsista di ricerca [BDR 3/2026]</p>
+    <p>PhD Candidate | Data Science | NLP & ML Research</p>
   </header>
 
-  <!-- Work Experience -->
-  <section class="section">
+  <!-- Experience -->
+  <section id="experience">
     <h2><i class="fa fa-briefcase"></i> Work Experience</h2>
+    <div class="timeline">
+      <div class="event">
+        <div class="date">Sep 2025 – Mar 2026</div>
+        <h3>Research Intern – Banca d’Italia</h3>
+        <p>Financial Markets & Intermediaries Unit. NLP research on monetary policy communication.</p>
+      </div>
+      <div class="event">
+        <div class="date">Feb 2025 – Aug 2025</div>
+        <h3>Research Intern – Banca d’Italia</h3>
+        <p>Co‑author at ICAIF 2025; generative AI research & presentations.</p>
+      </div>
+      <!-- more events... -->
+    </div>
+  </section>
 
-    <div class="job">
-      <div class="date">Sep 2025 – Mar 2026</div>
-      <h3>Research Intern</h3>
-      <span class="place">Banca d’Italia – Directorate General for Economics, Statistics and Research</span>
-      <span class="location">Financial Markets and Intermediaries Unit</span>
-      <ul>
-        <li>Working paper in progress: “Let’s talk about it: a NLP approach to evaluate monetary policy communication”</li>
-        <li>Fine-tuned transformer-based models on ECB press conference transcripts to measure hawkish–dovish sentiment and construct an index of perceived monetary policy stance</li>
-        <li>Skills acquired: NLP, LLMs, ML, monetary policy</li>
-      </ul>
+  <!-- Projects -->
+  <section id="projects">
+    <h2><i class="fa fa-folder-open"></i> Selected Projects</h2>
+
+    <div class="project-card">
+      <h3>Prompting for Policy (ICAIF ’25)</h3>
+      <p>Forecasting macroeconomic scenarios with synthetic LLM personas.</p>
     </div>
 
-    <div class="job">
-      <div class="date">Feb 2025 – Aug 2025</div>
-      <h3>Research Intern</h3>
-      <span class="place">Banca d’Italia – Directorate General for Information Technology, Applied Research Team (ART)</span>
-      <ul>
-        <li>Co-author of paper accepted at 6th ACM International Conference on AI in Finance (ICAIF 2025)</li>
-        <li>Invited talk at Workshop on Veridical Data Science, Sapienza University of Rome</li>
-        <li>Oral presentation at Workshop on AI in Finance (ECAI 2025), Bologna, Italy</li>
-        <li>Obtained Generative AI Fundamentals certification (Udacity)</li>
-        <li>Skills acquired: NLP, LLMs, ML, prompt engineering</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="date">Feb 2024 – Oct 2024</div>
-      <h3>Master’s Degree Intern</h3>
-      <span class="place">Banca d’Italia – Directorate General for Information Technology, Applied Research Team (ART)</span>
-      <ul>
-        <li>Research thesis: “Authorship and Topic Analysis in Italian Central Bank Communication”</li>
-        <li>Skills acquired: Machine Learning, NLP, Topic Modeling</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="date">Nov 2021 – Jul 2022</div>
-      <h3>Bachelor’s Degree Intern</h3>
-      <span class="place">Banca d’Italia – Directorate General for Information Technology, Applied Research Team (ART)</span>
-      <ul>
-        <li>Research thesis: “An Experimental Study of the Bitcoin Lightning Network Properties”</li>
-        <li>Participation in the “State of the ART” event</li>
-        <li>Skills acquired: blockchain, Bitcoin Lightning Network, Graph Theory</li>
-      </ul>
-    </div>
+    <!-- add more -->
   </section>
 
   <!-- Education -->
-  <section class="section">
+  <section id="education">
     <h2><i class="fa fa-graduation-cap"></i> Education</h2>
-
-    <div class="education">
-      <div class="date">2025 – Current</div>
+    <div class="event">
+      <div class="date">2025 – Present</div>
       <h3>PhD in Data Science</h3>
-      <span class="place">Sapienza University of Rome</span>
-      <ul>
-        <li>Research focus: trustworthiness and explainability of large reasoning models in economics and finance</li>
-        <li>Member of the RSTLess research group</li>
-      </ul>
+      <p>Sapienza University of Rome — explainability of large reasoning models.</p>
     </div>
-
-    <div class="education">
+    <div class="event">
       <div class="date">2022 – 2024</div>
-      <h3>MSc in Data Science</h3>
-      <span class="place">Sapienza University of Rome</span>
+      <h3>MSc in Data Science — 110/110 cum laude</h3>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2><i class="fa fa-wrench"></i> Skills</h2>
+    <div class="skills">
       <ul>
-        <li>Final grade: 110/110 cum laude</li>
-        <li>Weighted average: 29.26</li>
+        <li>Python</li>
+        <li>R</li>
+        <li>SQL</li>
+        <li>NLP</li>
+        <li>Machine Learning</li>
+        <li>LaTeX</li>
+        <li>Knime</li>
       </ul>
     </div>
-
-    <div class="education">
-      <div class="date">2019 – 2022</div>
-      <h3>BSc in Management and Computer Science</h3>
-      <span class="place">LUISS Guido Carli University</span>
-      <ul>
-        <li>Final grade: 110/110 cum laude</li>
-        <li>Weighted average: 29.49</li>
-      </ul>
-    </div>
   </section>
 
-  <!-- Publications -->
-  <section class="section">
-    <h2><i class="fa fa-book"></i> Publications</h2>
-    <div class="publication">
-      <p>Iadisernia, G., Camassa, C. (2025). <strong>Prompting for Policy: Forecasting Macroeconomic Scenarios with Synthetic LLM Personas</strong>. Proceedings of the 6th ACM International Conference on AI in Finance (ICAIF).</p>
-    </div>
+  <!-- Contact -->
+  <section id="contact">
+    <h2><i class="fa fa-envelope"></i> Contact</h2>
+    <p>Email: <a href="mailto:iadisernia@diag.uniroma1.it">iadisernia@diag.uniroma1.it</a></p>
+    <p><a href="https://linkedin.com/in/giulia-iadisernia">giulia-iadisernia</a></p>
   </section>
-
-  <!-- Conferences & Seminars -->
-  <section class="section">
-    <h2><i class="fa fa-chalkboard-teacher"></i> Conferences & Seminars</h2>
-    <ul>
-      <li>26 Oct 2025 – Workshop on AI in Finance (ECAI 2025), Bologna</li>
-      <li>20 Jun 2025 – Workshop on Veridical Data Science, Sapienza University of Rome</li>
-    </ul>
-  </section>
-
-  <!-- Honours & Awards -->
-  <section class="section">
-    <h2><i class="fa fa-trophy"></i> Honours & Awards</h2>
-    <ul>
-      <li>2024 – Giorgio Mortara scholarship, Banca d’Italia</li>
-      <li>2022–2024 – Wanted the best scholarship, Sapienza University of Rome</li>
-      <li>2021 – 1st Place, KNIME Analytics in Creative Industries Challenge</li>
-      <li>2021–2022 – United for learning scholarship, LUISS Guido Carli University</li>
-    </ul>
-  </section>
-
-  <!-- Certifications -->
-  <section class="section">
-    <h2><i class="fa fa-certificate"></i> Certifications</h2>
-    <ul>
-      <li>2025 – Generative AI Fundamentals, Udacity</li>
-      <li>2022 – Basic Proficiency in KNIME Analytics Platform, KNIME</li>
-    </ul>
-  </section>
-
-  <!-- Personal Skills -->
-  <section class="section sidebar">
-    <h2><i class="fa fa-user"></i> Personal Skills</h2>
-    <ul>
-      <li>Languages: Italian (native), English</li>
-      <li>IT Skills: Python, R, SQL, LaTeX, KNIME, Google Earth Engine</li>
-      <li>Microsoft Office: Word, Excel, PowerPoint</li>
-    </ul>
-  </section>
-
-</div>
 
 </body>
 </html>
