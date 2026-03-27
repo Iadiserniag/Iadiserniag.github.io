@@ -39,6 +39,7 @@ body {
 }
 
 /* Transparent logo in the background */
+/* Hero background logo */
 .hero::before {
     content: "";
     position: absolute;
@@ -48,9 +49,25 @@ body {
     pointer-events: none;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 50vw;
+    
+    /* Flexible size: scales with viewport but not too small */
+    background-size: 40vw; 
     opacity: 0.11;
     z-index: 0;
+}
+
+/* Make it slightly smaller on very large screens */
+@media (min-width: 1200px) {
+    .hero::before {
+        background-size: 500px; /* cap maximum size */
+    }
+}
+
+/* Make it bigger on very small screens so it’s visible */
+@media (max-width: 400px) {
+    .hero::before {
+        background-size: 120px; /* minimum size on phones */
+    }
 }
 
 /* Ensure content is above logo */
